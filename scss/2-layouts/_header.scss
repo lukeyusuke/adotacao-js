@@ -1,0 +1,27 @@
+@use '../1-base/variables';
+
+.header{
+    background-color: variables.$bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+
+    &__menu{
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: variables.$main-color;
+        transition: .3s;
+
+        &:hover{
+            color: rgba(0,0,0,0.7);
+        }
+    }
+
+}

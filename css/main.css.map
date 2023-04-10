@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/1-base/_reset.scss","../scss/2-layouts/_header.scss","../scss/1-base/_variables.scss","../scss/3-modules/_spacings.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;EAGI;EACA;EACA;EACA;;;ACJJ;EACI,kBCHO;EDIP;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;;AAGJ;EACI;EACA,OCjBK;EDkBL;;AAEA;EACI;;;AEtBZ;EACI","file":"main.css"}
