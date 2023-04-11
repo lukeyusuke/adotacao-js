@@ -1,7 +1,7 @@
 @use '../1-base/variables';
 
 .header{
-    background-color: variables.$bg-color;
+    background-color: variables.$secondary-color;
     display: flex;
     align-items: center;
     justify-content: space-between;
