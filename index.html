@@ -13,22 +13,24 @@
     </head>
     <body>
         <header class="header padding-box">
-            <div class="header__logo">
-                <img src="./images/logo.svg" alt="Logo do Site">
+            <div class="header__box">
+                <div class="header__logo">
+                    <img src="./images/logo.svg" alt="Logo do Site">
+                </div>
+                <nav class="header__menu">
+                    <a class="header__link" href="introduce-content">
+                        <li class="header__item">Home</li>
+                    </a>
+                    <a class="header__link" href="search-content">
+                        <li class="header__item">Adotar</li>
+                    </a>
+                </nav>
             </div>
-            <nav class="header__menu">
-                <a class="header__link" href=".introduce-content">
-                    <li class="header__item">Home</li>
-                </a>
-                <a class="header__link" href=".search-content">
-                    <li class="header__item">Adotar</li>
-                </a>
-            </nav>
         </header>
         <main>
             <section class="introduce-content">
                 <div class="introduce-content__box">
-                    <div class="introduce-content__text">
+                    <div class="introduce-content__box__text">
                         <h1 class="introduce-content__h1"> Pensando em adotar<br/> um PET? </h1>
                         <p class="introduce-content__p"> Um doguinho é um amigo fiel e amoroso que<br/> pode trazer muita alegria à sua vida</p>
                         <a class="introduce-content__link" href="">
@@ -41,24 +43,39 @@
                 </div>
             </section>
             <section class="search-content">
-                <div class="search-content__box">
+                <div class="search-content__main-box">
                     <div class="search-content__text">
-                        <h1 class="search-content__text__h1"> Adote agora</h1>
-                        <span class="search-content__text__span">
-                            Rápido e facil
-                        </span>
+                        <h1 class="search-content__text__h1"> Adote agora </h1>
+                        <span class="search-content__text__span"> Rápido e facil </span>
                     </div>
-                    <div class="search-content__position">
+                    <div class="position">
                         <div class="search-content__quest">
                             <input class="search-content__quest__input" type="text" name="dog">
-                            <img class="search-content__quest__image"src="./images/lupa.svg" alt="">
+                            <div class="position search-content__quest__image">
+                                <img src="./images/lupa.svg" alt="Ícone para pesquisar">
+                            </div>
                         </div>
+                    </div>
+                    <div class="search-content__dogs">
+                        <div class="search-content__dogs__box"></div>
+                        <div class="search-content__dogs__box"></div>
+                        <div class="search-content__dogs__box"></div>
+                        <div class="search-content__dogs__box"></div>
+                        <div class="search-content__dogs__box"></div>
+                        <div class="search-content__dogs__box"></div>
+                        <div class="search-content__dogs__box"></div>
+                        <div class="search-content__dogs__box"></div>
+                    </div>
+                    <div class="position">
+                        <button class="search-content__btn">Ver mais</button>
                     </div>
                 </div>
             </section>
         </main>
         <footer class="footer-content">
-            <p class="footer-content__p"> Conteúdo feito por Luke Yusuke 🐕 - 2023</p>
+            <div class="footer-content__box">
+                <p class="footer-content__p"> Conteúdo feito por Luke Yusuke 🐕 - 2023</p>
+            </div>
         </footer>
     </body>
 </html>

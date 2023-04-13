@@ -1,0 +1,22 @@
+@mixin btn-style($color, $bgColor){
+    color: $color;
+    background-color: $bgColor;
+    cursor: pointer;
+    border: none;
+    border-radius: 2rem;
+    font-weight: bold;
+    transition: .3s;
+    padding: 1rem 3rem;
+}
+
+@mixin mobile{
+    @media(max-width: 660px){
+        @content;
+    }
+}
+
+@mixin screen{
+    @media(max-width: 785px){
+        @content;
+    }
+}

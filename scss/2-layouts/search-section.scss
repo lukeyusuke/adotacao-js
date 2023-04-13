@@ -1,17 +1,12 @@
 @use '../1-base/variables';
+@use '../3-modules/mixins';
 
 .search-content{
     background-color: variables.$btn-color;
-    padding: 2rem 2rem 5rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
 
-    &__box{
+    &__main-box{
         max-width: 1366px;
-    }
-
-    &__position{
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     &__text{
@@ -28,15 +23,23 @@
         }
     }
 
+    .position{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     &__quest{
         position: relative;
-        border-radius: 5rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 40%;
-        background-color: variables.$secondary-color;
 
+        @include mixins.mobile{
+            width: 80%;
+        }
+        
         &__input{
             border-radius: 5rem 0 0 5rem;
             border: none;
@@ -44,13 +47,44 @@
             padding-left: 1rem;
             height: 50px;
             outline: 0;
-            width: 90%;
+            width: 100%;
         }
 
         &__image{
+            background-color: variables.$secondary-color;
+            border-radius: 0 5rem 5rem 0;
+            padding: 1rem;
+            height: 50px;
+            width: 50px;
             cursor: pointer;
-            right: 1rem;
-            position: absolute;
+        }
+    }
+
+    &__dogs{
+        margin-top: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include mixins.mobile{
+            justify-content: center;
+        }
+
+        &__box{
+            background-color: variables.$bg-color;
+            border-radius: 1rem .5rem 1rem .5rem;
+            margin-bottom: 2rem;
+            height: 300px;
+            width: 300px;
+        }
+    }
+
+    &__btn{
+        @include mixins.btn-style(variables.$secondary-color, variables.$main-color);
+        margin: 2rem 0;
+
+        &:hover{
+            background-color: #ebe8e8;
         }
     }
 }

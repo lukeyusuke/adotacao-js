@@ -1,1 +1,16 @@
 @use '../1-base/variables';
+
+.footer-content{
+    background-color: variables.$bg-color;
+    padding: 1rem;
+    
+    &__box{
+        max-width: 1366px;
+    }
+
+    &__p{
+        color: variables.$secondary-color;
+        font-weight: bold;
+        text-align: center;
+    }
+}
