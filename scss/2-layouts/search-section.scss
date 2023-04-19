@@ -65,6 +65,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        position: relative;
 
         @include mixins.mobile{
             justify-content: center;
@@ -74,8 +75,64 @@
             background-color: variables.$bg-color;
             border-radius: 1rem .5rem 1rem .5rem;
             margin-bottom: 2rem;
-            height: 300px;
+            height: 430px;
+            position: relative;
+            overflow: hidden;
             width: 300px;
+
+            @include mixins.mobile{
+                width: 95%;
+                margin-bottom: 3rem;
+            }
+        }
+
+        &__img{
+           border-radius: 1rem .5rem 0 0;
+           object-fit: cover;
+           object-position: top;
+           transition: .5s;
+           height: 240px;
+           width: 100%;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        &__h3{
+            font-size: 1rem;
+            padding: .5rem 0 0 1rem;
+            font-weight: bold;
+            bottom: 1rem;
+        }
+
+        &__p{
+            padding-left: 1rem;
+            line-height: 1.35rem;
+            width: 90%;
+            font-size: .9rem;
+            color: #494949;
+        }
+
+        &__span{
+            color: variables.$btn-color;
+            display: block;
+            font-weight: bold;
+            font-size: .85rem;
+            padding: .25rem 0 .75rem 1rem;
+        }
+
+        &__btn{
+            @include mixins.btn-style(variables.$main-color, variables.$secondary-color);
+            border-radius: 0;
+            bottom: 0;
+            position: absolute;
+            transition: .5s;
+            width: 100%;
+            
+            &:hover{
+                background-color: #fa2251;
+            }
         }
     }
 
