@@ -154,6 +154,9 @@
   overflow: hidden;
   width: 300px;
 }
+.search-content__dogs__box:first-child {
+  background-color: red;
+}
 @media (max-width: 660px) {
   .search-content__dogs__box {
     width: 95%;

@@ -61,6 +61,7 @@
     }
 
     &__dogs{
+
         margin-top: 5rem;
         display: flex;
         flex-wrap: wrap;
@@ -72,6 +73,11 @@
         }
 
         &__box{
+
+            &:first-child{
+                display: none; // Deixa elemento que foi clonado sem exibir
+            }
+
             background-color: variables.$bg-color;
             border-radius: 1rem .5rem 1rem .5rem;
             margin-bottom: 2rem;

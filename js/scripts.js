@@ -1,7 +1,10 @@
+const searchContent = document.querySelector('.search-content__dogs');
+const dogsBox = document.querySelector('.search-content__dogs__box');
+
 const apiIntegration = () => {
     const apiData = () => {
         const apiKey = 'live_anHbEgCLTK9xBPpYclvf2LFsSq8T8WkTrFxIXeJAzlv6pfsGzCZlR6PhJFKndxwY';
-    
+        
         const sendValues = {
             method: 'GET',
             headers: {
@@ -9,7 +12,7 @@ const apiIntegration = () => {
                 'x-api-key': `${apiKey}`
             },
         }
-
+        
         getAllBreeds(sendValues);
     }
     
@@ -18,53 +21,28 @@ const apiIntegration = () => {
             const response = await fetch('https://api.thedogapi.com/v1/breeds/', sendValues);
             const data = await response.json();
             showBreeds(data);
-            console.log(data);
+            
         } catch(error) {
             console.error(`Falha na requisição: ${error}`);
         } 
-    
+        
     }
     
     showBreeds = (data) => {
-        const searchContent = document.querySelector('.search-content__dogs');
-
+        let dogs = [];
         try {
-            const dogData = data.map((dog) => {
-                const dogBox = document.createElement('div');
-                dogBox.setAttribute('class', 'search-content__dogs__box');
-    
-                const dogImage = document.createElement('img');
-                dogImage.setAttribute('class', 'search-content__dogs__img');
-                dogImage.setAttribute('src', dog.image.url);
-    
-                const dogName = document.createElement('h3');
-                dogName.setAttribute('class', 'search-content__dogs__h3');
-    
-                const dogTemperament = document.createElement('p');
-                dogTemperament.setAttribute('class', 'search-content__dogs__p');
-    
-                const dogLifeSpan = document.createElement('span');
-                dogLifeSpan.setAttribute('class', 'search-content__dogs__span');
+            dogs = data.map((dog) => {
+                const dogBox = dogsBox.cloneNode(true);
+                const dogImg = dogBox.querySelector('[data-image]');
+                const dogName = dogBox.querySelector('[data-name]');
+                const dogLifeSpan = dogBox.querySelector('[data-life]');
+                const dogTemperament = dogBox.querySelector('[data-temperament]');
 
-                const dogBtn = document.createElement('button');
-                dogBtn.setAttribute('class', 'search-content__dogs__btn');
-    
-                searchContent.appendChild(dogBox);
-                dogBox.appendChild(dogImage);
-                dogBox.appendChild(dogName);
-                dogBox.appendChild(dogLifeSpan);
-                dogBox.appendChild(dogTemperament);
-                dogBox.appendChild(dogBtn);
-    
+                dogImg.src = dog.image.url;
                 dogName.innerText = dog.name;
                 dogLifeSpan.innerText = dog.life_span;
-
-                if(dog.temperament == undefined){
-                    dogTemperament.innerHTML = 'Características não encontradas';
-                }else{
-                    dogTemperament.innerText = dog.temperament;
-                }
-                dogBtn.innerText = 'Adotar';
+                dogTemperament.innerText = dog.temperament;
+                searchContent.appendChild(dogBox);
 
             });    
         } catch (error){
@@ -76,4 +54,3 @@ const apiIntegration = () => {
 }
 
 apiIntegration();
-
