@@ -73,11 +73,7 @@
         }
 
         &__box{
-
-            &:first-child{
-                display: none; // Deixa elemento que foi clonado sem exibir
-            }
-
+            
             background-color: variables.$bg-color;
             border-radius: 1rem .5rem 1rem .5rem;
             margin-bottom: 2rem;
@@ -86,10 +82,18 @@
             overflow: hidden;
             width: 300px;
 
+            &:first-child{
+                display: none; // Deixa elemento que foi clonado sem exibir
+            }
+
             @include mixins.mobile{
                 width: 95%;
                 margin-bottom: 3rem;
             }
+        }
+
+        &__hide{
+            display: none;
         }
 
         &__img{
