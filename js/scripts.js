@@ -1,6 +1,7 @@
 const searchContent = document.querySelector('.search-content__dogs');
 const dogsBox = document.querySelector('.search-content__dogs__box');
 const searchInput = document.querySelector('.search-content__quest__input');
+const showBtn = document.querySelector('.search-content__btn');
 
 const apiIntegration = () => {
     let dogs = [];
@@ -39,12 +40,17 @@ const apiIntegration = () => {
                 const dogName = dogBox.querySelector('[data-name]');
                 const dogLifeSpan = dogBox.querySelector('[data-life]');
                 const dogTemperament = dogBox.querySelector('[data-temperament]');
+                
+                if(dog.id > 8){
+                    dogBox.classList.add('hide');
+                }
 
                 dogImg.src = dog.image.url;
-                dogName.innerText = dog.name;
-                dogLifeSpan.innerText = dog.life_span;
-                dogTemperament.innerText = dog.temperament;
+                dogName.textContent = dog.name;
+                dogLifeSpan.textContent = dog.life_span;
+                dogTemperament.textContent = dog.temperament;
                 searchContent.appendChild(dogBox);
+
                 return {name: dog.name, box: dogBox};
             });
         } catch (error){
@@ -56,7 +62,19 @@ const apiIntegration = () => {
         const value = e.target.value.toLowerCase()
         dogs.forEach(dog => {
             const isVisible = dog.name.toLowerCase().includes(value);
-            dog.box.classList.toggle("hide", !isVisible);
+            dog.box.classList.toggle('hide', !isVisible);
+        })
+    })
+    
+    showBtn.addEventListener('click', () => {
+        dogs.forEach(dog => {
+            dog.box.classList.toggle('hide');
+            
+            if(!dog.box.classList.contains('hide')){
+                return showBtn.textContent = "Ver menos";
+            }
+
+            showBtn.textContent = "Ver mais";
         })
     })
 

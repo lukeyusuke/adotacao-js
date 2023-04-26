@@ -92,7 +92,11 @@
             }
         }
 
-        &__hide{
+        .hide{
+            display: none;
+        }
+
+        .hide2{
             display: none;
         }
 
