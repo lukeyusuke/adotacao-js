@@ -1,0 +1,15 @@
+[33m869be49[m[33m ([m[1;36mHEAD -> [m[1;32mrequisicao[m[33m, [m[1;31morigin/requisicao[m[33m)[m Adiciona evento para o botão de "Ver mais"
+[33mb72274b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Adiciona filtro de busca em JS
+[33me47492b[m Refatorando código
+[33m3ec8b21[m Mostra e estiliza dados de cada cão;
+[33m7c64c71[m Cria função showBreeds
+[33m960618b[m Cria função getAllBreeds
+[33m5857530[m Integra aplicação com uma API
+[33m9a49a66[m Adiciona responsividade ao site
+[33maa05344[m Cria e estiliza seção de "Busca"
+[33m3fe2d82[m Refatorando layout
+[33mdebf2ca[m Estilização da MAIN (conteúdo principal) da INDEX
+[33m7288e0d[m Estilização do HEADER
+[33m79a5fc7[m Cria estrutura base do HTML
+[33m3c19ab0[m Organiza pastas e arquivos do projeto
+[33maf51a47[m Initial commit

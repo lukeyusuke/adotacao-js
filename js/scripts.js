@@ -51,7 +51,7 @@ const apiIntegration = () => {
                 dogTemperament.textContent = dog.temperament;
                 searchContent.appendChild(dogBox);
 
-                return {name: dog.name, box: dogBox};
+                return {id: dog.id, name: dog.name, box: dogBox};
             });
         } catch (error){
             console.error(`Algo deu errado: ${error}`);
@@ -63,10 +63,14 @@ const apiIntegration = () => {
         dogs.forEach(dog => {
             const isVisible = dog.name.toLowerCase().includes(value);
             dog.box.classList.toggle('hide', !isVisible);
+
+            if(value == '' && dog.id > 8){
+                dog.box.classList.add('hide');
+            };
         })
     })
     
-    showBtn.addEventListener('click', () => {
+    showBtn.addEventListener('click', (e) => {
         dogs.forEach(dog => {
             dog.box.classList.toggle('hide');
             
