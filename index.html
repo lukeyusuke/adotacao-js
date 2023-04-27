@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" description="Site para a adoção de cachorros de raça"/>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;800&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
@@ -51,14 +52,18 @@
                     <div class="position">
                         <div class="search-content__quest">
                             <input class="search-content__quest__input" type="text">
-                            <div class="position search-content__quest__image">
-                                <img src="./images/lupa.svg" alt="Ícone para pesquisar">
+                            <div class="position search-content__quest__image active">
+                                <figure>
+                                    <img src="./images/clean.svg" alt="Ícone para pesquisar">
+                                </figure>
                             </div>
                         </div>
                     </div>
                     <div class="search-content__dogs">
                         <div class="search-content__dogs__box">
-                            <img src="" class="search-content__dogs__img" data-image></img>
+                            <figure>
+                                <img src="" class="search-content__dogs__img" data-image></img>
+                            </figure>
                             <h3 class="search-content__dogs__h3" data-name></h3>
                             <span class="search-content__dogs__span" data-life></span>
                             <p class="search-content__dogs__p" data-temperament></p>
