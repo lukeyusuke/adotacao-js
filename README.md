@@ -1,25 +1,31 @@
-<h1 id="inicio" align="center"></h1>
+<h1 id="inicio" align="center">AdotaCão</h1>
 
-![Layout Portfólio](./assets/images/layout.png)
+![Layout Portfólio](./images/layout.png)
 
 <p align="center">
-    <a href="#sobre">Sobre</a> |
-    <a href="#secoes">Seções</a> |
-    <a href="#tecnologias">Tecnologias</a> |
-    <a href="#funcionalidades">Funcionalidades</a> |
-    <a href="#aprendizados">Aprendizados</a> |
-    <a href="#autor">Autor</a>
+    <b weight="bold">🐕 AdotaCão </b>
+    <b weight="bold">✅ Concluído </b>
+</p>
+
+<p align="center">
+    <a href="#sobre">Sobre</a> •
+    <a href="#secoes">Seções</a> •
+    <a href="#tecnologias">Tecnologias</a> •
+    <a href="#funcionalidades">Funcionalidades</a> •
+    <a href="#aprendizados">Aprendizados</a> •
+    <a href="#autor">Autor</a> •
+    <a href="#licenca">Licença</a>
 </p>
 <br/>
 
 <h4 align="center">
-    <a href="https://luke-dev.netlify.app">Clique para visitar o AdotaCão</a>
+    <a href="https://adotacao.netlify.app">Clique para visitar o AdotaCão</a>
 </h4>
 <br/>
 
-<h2 id="sobre">💻 Sobre o Adotacão</h2>
+<h2 id="sobre">💻 Sobre o projeto</h2>
 
-O site foi construído com o objetivo de colocar em prática os estudos sobre APIs, entendendo desde a leitura de sua documentação até a implementação no código.  </p>
+<p> 🐕 AdotaCão - O site foi construído com o objetivo de colocar em prática os estudos sobre APIs, entendendo desde a leitura de sua documentação até a implementação no código. </p>
 <br/>
 
 <h2 id="secoes">🗂️ Seções</h2>
@@ -47,6 +53,7 @@ Além disso, a API utilizada foi <a href="https://thedogapi.com"/> The Dog API <
 <h2 id="funcionalidades"> ⚙️ Funcionalidades </h2>
 
 - [x] Barra de pesquisa: Filtra as pesquisas pelo nome da raça do cachorro, mostrando apenas os dados do cão que foi digitado.
+
 - [x] Botão "Ver mais": Ao efetuarmos a ação de clique, mostra o restante dos containers dos cachorros e desta forma muda o valor dentro do botão para "Ver menos" e realiza o processo inverso.  
 
 <br/>
@@ -60,7 +67,7 @@ Além disso, a API utilizada foi <a href="https://thedogapi.com"/> The Dog API <
 
 <h2 id="autor">👨🏾‍💻 Autor </h2>
 
-![Imagem Luke Yusuke](/assets/images/luke2.png)
+![Imagem Luke Yusuke](/images/luke.png)
 
 <p>
     <a target="_blank" href="mailto:lukedev09@gmail.com" alt="Link para Email"> 
@@ -74,7 +81,11 @@ Além disso, a API utilizada foi <a href="https://thedogapi.com"/> The Dog API <
     </a>
 </p>
 
+<h2 id="licenca">📝 Licença</h2>
+
+<p> Projeto feito sobe licença <a/>MIT</a></p>
 <p> Desenvolvido por <b style="color:#9F40EB">Luke Yusuke 😁</b></p>
+
 <br/>
 
 <h4 align="center">
