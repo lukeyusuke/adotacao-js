@@ -83,7 +83,7 @@ Além disso, a API utilizada foi <a href="https://thedogapi.com"/> The Dog API <
 
 <h2 id="licenca">📝 Licença</h2>
 
-<p> Projeto feito sobe licença <a/>MIT</a></p>
+<p> Projeto feito sobe licença <a href="https://github.com/lukeyusuke/dog-api/blob/main/LICENSE"/>MIT</a> </p>
 <p> Desenvolvido por <b style="color:#9F40EB">Luke Yusuke 😁</b></p>
 
 <br/>
