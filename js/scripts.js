@@ -36,6 +36,7 @@ const apiIntegration = () => {
     const showBreeds = data => {
         try {
             dogs = data.map((dog) => {
+                console.log(data);
                 const dogBox = dogsBox.cloneNode(true);
                 const dogImg = dogBox.querySelector('[data-image]');
                 const dogName = dogBox.querySelector('[data-name]');
@@ -87,7 +88,7 @@ const apiIntegration = () => {
 
             dogs.forEach(dog => {
                 dog.box.classList.add('hide');
-                if(dog.id < 8){
+                if(dog.id <= 8){
                     dog.box.classList.remove('hide');
                 }
             })
@@ -110,9 +111,3 @@ const apiIntegration = () => {
 }
 
 apiIntegration();
-
-// MELHORIAS
-
-// Adicionar if para cachorros que não tem temperamento - FOI
-// Mudar código para Axios - FOI
-// Substituir lupa por X e colocar evento - FOI
