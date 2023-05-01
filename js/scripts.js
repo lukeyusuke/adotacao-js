@@ -36,7 +36,6 @@ const apiIntegration = () => {
     const showBreeds = data => {
         try {
             dogs = data.map((dog) => {
-                console.log(data);
                 const dogBox = dogsBox.cloneNode(true);
                 const dogImg = dogBox.querySelector('[data-image]');
                 const dogName = dogBox.querySelector('[data-name]');
@@ -50,12 +49,13 @@ const apiIntegration = () => {
                 dogImg.src = dog.image.url;
                 dogName.textContent = dog.name;
                 dogLifeSpan.textContent = dog.life_span;
+                dogTemperament.textContent = dog.temperament;
 
                 if(dog.temperament == null){
                     dogTemperament.textContent = 'Não possui informações adicionais';
                 }
 
-                dogTemperament.textContent = dog.temperament;
+
                 searchContent.appendChild(dogBox);
 
                 return {id: dog.id, name: dog.name, box: dogBox};
@@ -98,6 +98,10 @@ const apiIntegration = () => {
     showBtn.addEventListener('click', () => {
         dogs.forEach(dog => {
             dog.box.classList.toggle('hide');
+
+            if(dog.id <= 8){
+                dog.box.classList.remove('hide');
+            }
             
             if(!dog.box.classList.contains('hide')){
                 return showBtn.textContent = "Ver menos";
