@@ -3,9 +3,12 @@
 
 .search-content{
     background-color: variables.$btn-color;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
 
     &__main-box{
+        width: 100%;
         max-width: 1366px;
     }
 

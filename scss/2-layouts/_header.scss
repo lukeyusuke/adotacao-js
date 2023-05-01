@@ -2,12 +2,15 @@
 
 .header{
     background-color: variables.$btn-color;
+    display: flex;
+    justify-content: center;
     
     &__box{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 1466px;
+        max-width: 1366px;
+        width: 100%;
     }
 
     &__logo{
